@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feliz cumpleaños, Arantza</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Karla:wght@400;500&family=La+Belle+Aurore&display=swap">
+<style>
+:root{--cream:#FAF4EC;--ink:#342721;--rose:#D8A0A6;--wine:#7B263A;--gold:#B99A6B;--sheet:#FFFBF5;--tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .15 0 0 0 0 .1 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background-color:var(--cream);color:var(--ink);font:400 1.1rem/1.7 Karla,system-ui,sans-serif;overflow:hidden}
+.tt{display:none}
+.prog{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;background:var(--wine);width:0;transition:width .6s ease;z-index:9}
+.scr{position:fixed;inset:0;padding:calc(env(safe-area-inset-top,0px) + 2rem) 1.5rem calc(env(safe-area-inset-bottom,0px) + 2rem);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s;display:flex;background-color:var(--cream);background-image:var(--tex);color:var(--ink)}
+.scr.on{opacity:1;visibility:visible}
+.s5{background-image:radial-gradient(60% 40% at 50% 30%,rgba(216,160,166,.18),transparent 70%),var(--tex)}
+.s4{background-color:#3A1D27;background-image:none;color:var(--cream)}
+.s4 h2{color:var(--cream)}
+.s4 h2::after{display:none}
+.s4 .btn{background:var(--cream);color:var(--wine);border-color:var(--cream)}
+.deco{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.fp{position:absolute;bottom:-3vh;border-radius:50%;background:var(--gold);box-shadow:0 0 8px 2px rgba(185,154,107,.55);opacity:0;animation:rise linear infinite}
+.s4 .fp{background:#E3C894;box-shadow:0 0 10px 3px rgba(227,200,148,.6)}
+.scr:not(.on) .deco *{animation-play-state:paused}
+@keyframes rise{0%{opacity:0;transform:translate3d(0,0,0)}15%{opacity:.85}85%{opacity:.85}100%{opacity:0;transform:translate3d(var(--dx),-108vh,0)}}
+.sprig{position:absolute;bottom:0;width:4.5rem;height:auto;fill:none;stroke:var(--gold);stroke-width:1.1;opacity:.85;z-index:0}
+.sprig.l{left:.5rem}.sprig.r{right:.5rem;transform:scaleX(-1)}
+.in{position:relative;z-index:1;margin:auto;max-width:34rem;width:100%;text-align:center}
+.s3 .in,.sh .in,.sa .in{max-width:40rem}
+h1,h2{font:500 clamp(2.2rem,8vw,3.4rem)/1.1 "Cormorant Garamond",Georgia,serif;margin:0 0 1.25rem;color:var(--ink)}
+h1:focus,h2:focus{outline:0}
+h2::after{content:"";display:block;height:16px;width:10rem;margin:1.1rem auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cellipse cx='12' cy='9' rx='6' ry='7.5' fill='%23D8A0A6' stroke='%237B263A' stroke-width='1.2'/%3E%3Cpath d='M12 16.5l-1.6 2.2h3.2z' fill='%237B263A'/%3E%3Cpath d='M12 18.7c-1.5 1.5 1.5 2.8 0 4.3' fill='none' stroke='%237B263A' stroke-width='1'/%3E%3C/svg%3E") center/16px no-repeat,linear-gradient(var(--gold),var(--gold)) left center/4rem 1px no-repeat,linear-gradient(var(--gold),var(--gold)) right center/4rem 1px no-repeat}
+.sub{margin:0 auto 2rem;max-width:30rem;white-space:pre-line;opacity:.9}
+.hand{font:400 1.4rem/1.4 "La Belle Aurore",cursive;color:var(--wine);margin:0 0 .75rem}
+.big{font:italic 400 clamp(1.9rem,7vw,2.8rem)/1.25 "Cormorant Garamond",Georgia,serif;margin:0 0 1.25rem}
+.q{font:500 clamp(1.5rem,5.5vw,2rem)/1.3 "Cormorant Garamond",Georgia,serif;color:var(--wine);margin:2rem 0 0}
+.heart{display:block;width:3.2rem;height:3.2rem;margin:0 auto 1.5rem;animation:beat 3.2s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.btn{font:500 1rem Karla,sans-serif;letter-spacing:.04em;padding:.9rem 2rem;min-height:3rem;border-radius:2px;border:1px solid var(--wine);background:var(--wine);color:var(--cream);cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px);background:#651E30}
+.btn:active{transform:scale(.98)}
+.btn.alt{background:transparent;color:var(--wine)}
+.btn.alt:hover{background:rgba(123,38,58,.08)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.s4 button:focus-visible{outline-color:var(--cream)}
+.duo{display:flex;flex-direction:column;gap:.9rem;align-items:stretch;margin-top:1.75rem}
+@media (min-width:34rem){.duo{flex-direction:row;justify-content:center}}
+.rv{opacity:0;transform:translateY(10px);transition:opacity .9s ease,transform .9s ease}
+.rv.vis{opacity:1;transform:none}
+.letter{position:relative;background:var(--sheet);text-align:left;padding:2.5rem 1.75rem;border:1px solid rgba(185,154,107,.45);box-shadow:0 14px 34px rgba(52,39,33,.12)}
+.letter::before{content:"";position:absolute;inset:8px;border:1px solid rgba(185,154,107,.3);pointer-events:none}
+.letter h2{font-style:italic;font-size:2.4rem;text-align:center}
+.letter p{margin:0 0 1.25rem;font:400 1.125rem/1.85 Karla,sans-serif;white-space:pre-line;max-width:60ch}
+.letter p:nth-of-type(1){font:italic 500 1.6rem/1.4 "Cormorant Garamond",Georgia,serif}
+.letter .sign{font:400 1.7rem/1.4 "La Belle Aurore",cursive;color:var(--wine);margin-top:1.5rem}
+.tl{list-style:none;margin:2rem 0;padding:0 0 0 1.75rem;border-left:1px solid var(--gold);text-align:left}
+.tl li{position:relative;margin:0 0 2.25rem}
+.tl li::before{content:"";position:absolute;left:calc(-1.75rem - 5px);top:.6rem;width:9px;height:9px;border-radius:50%;background:var(--cream);border:1px solid var(--wine)}
+.tl small{display:block;font:400 1.2rem "La Belle Aurore",cursive;color:var(--wine)}
+.tl h3,.cards h3{font:500 1.5rem/1.2 "Cormorant Garamond",Georgia,serif;margin:.2rem 0 .5rem}
+.tl p,.cards p{margin:0;font:400 1.1rem/1.75 Karla,sans-serif;white-space:pre-line}
+.ph{display:block;width:100%;max-height:18rem;object-fit:contain;margin-top:1rem;padding:.5rem;background:var(--sheet);border:1px solid rgba(185,154,107,.45);cursor:zoom-in}
+.cards{margin:2rem 0;text-align:left}
+.cards article{position:relative;padding:1.5rem 0;border-top:1px solid rgba(185,154,107,.55)}
+.cards article:last-child{border-bottom:1px solid rgba(185,154,107,.55)}
+.cards svg{position:absolute;left:0;top:1.5rem;width:1.7rem;height:1.7rem;color:var(--wine);stroke-width:1.3}
+.cards h3{display:flex;align-items:center;min-height:1.9rem;padding-left:2.6rem;margin:0}
+.cards p{margin-top:.75rem}
+.hide{display:none}
+.ans{display:none}.ans.show{display:block;animation:fadein .9s ease both}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.petal{position:fixed;top:-5vh;z-index:20;pointer-events:none;border-radius:60% 0 60% 0;animation:fall linear forwards}
+@keyframes fall{to{transform:translate3d(var(--dx),110vh,0) rotate(var(--rot))}}
+.lb{position:fixed;inset:0;background:rgba(52,39,33,.94);z-index:30;display:none;flex-direction:column;align-items:center;justify-content:center;padding:1rem;text-align:center}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:72vh;object-fit:contain}
+.lb p{color:var(--cream);margin:.75rem 0 0}
+.lb .btn{margin-top:1rem;background:var(--cream);color:var(--wine);border-color:var(--cream)}
+.mus{position:fixed;left:.75rem;bottom:calc(env(safe-area-inset-bottom,0px) + .75rem);z-index:9;display:none;align-items:center;gap:.5rem;background:var(--sheet);color:var(--ink);border:1px solid rgba(185,154,107,.6);border-radius:2px;padding:.2rem .75rem}
+.mus.on{display:flex}
+.mus button{border:0;background:none;font:500 1rem Karla,sans-serif;cursor:pointer;color:var(--wine);min-height:2.5rem;padding:0 .25rem}
+.mus input{width:5rem;accent-color:var(--wine)}
+.flo{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.flo svg{position:absolute;width:clamp(7rem,30vw,10.5rem);height:auto;fill:none;stroke:var(--gold);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.flo .tl{top:-.4rem;left:-.4rem}
+.flo .tr{top:-.4rem;right:-.4rem;transform:scaleX(-1)}
+.flo .bl{bottom:-.4rem;left:-.4rem;transform:scaleY(-1)}
+.flo .br{bottom:-.4rem;right:-.4rem;transform:scale(-1,-1)}
+.duo{flex-wrap:wrap}
+#no.run{position:fixed;z-index:5;transition:left .25s ease,top .25s ease}
+.scr[hidden]{display:none}
+.heart{width:4.2rem;height:4.2rem;animation:bob 3.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.petal{border-radius:2px}
+.fp{top:-4vh;bottom:auto;border-radius:2px;box-shadow:none;animation-name:cfall}
+@keyframes cfall{0%{opacity:0;transform:translate3d(0,0,0) rotate(0)}10%{opacity:.95}90%{opacity:.95}100%{opacity:0;transform:translate3d(var(--dx),108vh,0) rotate(var(--rot))}}
+.flo svg{width:clamp(4.5rem,18vw,6.5rem)}
+.flo .bl{top:auto;bottom:-.2rem;left:.4rem;transform:none}
+.flo .br{top:auto;bottom:-.2rem;right:.4rem;transform:scaleX(-1)}
+.flo .bunt{position:absolute;top:0;left:0;right:0;height:2.9rem;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='44' viewBox='0 0 100 44'%3E%3Cpath d='M0 4Q50 24 100 4' fill='none' stroke='%237B263A' stroke-width='1'/%3E%3Cpath d='M6 8.5h16L14 28z' fill='%23D8A0A6'/%3E%3Cpath d='M30 13.2h16L38 33z' fill='%237B263A'/%3E%3Cpath d='M54 13.2h16L62 33z' fill='%23E3C07A'/%3E%3Cpath d='M78 8.5h16L86 28z' fill='%238FB5B0'/%3E%3C/svg%3E") repeat-x 0 0/100px 44px}
+.sub:empty{display:none}
+#c-title{margin-bottom:2rem}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01s!important}.ans.show{animation-duration:.01s!important}.fp{display:none}.heart,.petal{animation:none!important}.petal{display:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sprig" viewBox="0 0 80 160"><path d="M40 158C38 110 44 70 36 12"/><path d="M40 128c-14-4-22-14-24-26 12 0 22 8 24 26Z"/><path d="M40 108c14-4 22-14 24-26-12 0-22 8-24 26Z"/><path d="M39 84c-12-4-19-12-21-22 10 0 19 7 21 22Z"/><path d="M38 62c12-4 18-12 20-22-10 0-18 7-20 22Z"/><path d="M37 40c-8-3-13-9-14-16 7 0 13 5 14 16Z"/><circle cx="36" cy="9" r="3.5"/></symbol>
+<symbol id="flor" viewBox="0 0 100 100"><g id="fp"><path d="M50 50C35 38 37 14 50 5C63 14 65 38 50 50Z"/><path d="M50 44V18"/></g><use href="#fp" transform="rotate(72 50 50)"/><use href="#fp" transform="rotate(144 50 50)"/><use href="#fp" transform="rotate(216 50 50)"/><use href="#fp" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="5"/></symbol>
+<symbol id="rosa" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42"/><path d="M50 50m-3 0a3 3 0 1 1 6 0a8 8 0 1 1-16 0a14 14 0 1 1 28 0a21 21 0 1 1-42 0a28 28 0 1 1 56 0" fill="none"/><path d="M12 38c-5 14 1 31 13 40M88 38c5 14-1 31-13 40M34 91c14 6 30 6 44-1" fill="none"/></symbol>
+<symbol id="hoja" viewBox="0 0 40 80"><path d="M20 78C2 56 2 22 20 2c18 20 18 54 0 76Z"/><path d="M20 74V10M20 56l-8-8M20 44l8-8M20 32l-7-7" fill="none"/></symbol>
+<symbol id="cluster" viewBox="0 0 160 160"><g fill="rgba(222,203,168,.3)"><path d="M10 70C50 78 90 100 108 150" fill="none"/><path d="M70 10C80 50 100 80 150 100" fill="none"/><use href="#hoja" x="64" y="68" width="18" height="36" transform="rotate(-40 73 86)"/><use href="#hoja" x="92" y="96" width="18" height="36" transform="rotate(20 101 114)"/><use href="#hoja" x="100" y="44" width="16" height="32" transform="rotate(50 108 60)"/><use href="#hoja" x="40" y="94" width="16" height="32" transform="rotate(-20 48 110)"/><use href="#rosa" x="-10" y="-10" width="84" height="84"/><use href="#flor" x="84" y="-4" width="48" height="48"/><use href="#flor" x="-4" y="84" width="46" height="46"/><use href="#flor" x="62" y="62" width="30" height="30"/><circle cx="140" cy="108" r="3"/><circle cx="112" cy="146" r="3"/></g></symbol><symbol id="ballons" viewBox="0 0 100 160"><g stroke="#7B263A" stroke-width="1" fill="none" stroke-linecap="round"><path d="M36 77C32 100 40 120 34 158"/><path d="M68 87C72 110 62 132 38 158"/><path d="M52 47C50 80 46 120 36 158"/></g><g stroke="#7B263A" stroke-width="1.2"><ellipse cx="34" cy="48" rx="22" ry="28" fill="#D8A0A6"/><ellipse cx="68" cy="62" rx="19" ry="25" fill="#E3C07A"/><ellipse cx="52" cy="26" rx="18" ry="23" fill="#8FB5B0"/></g><g fill="#7B263A"><path d="M34 76l-3 5h6z"/><path d="M68 87l-3 5h6z"/><path d="M52 49l-3 5h6z"/></g><g fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".7"><path d="M22 36c2-7 8-11 13-11"/><path d="M58 50c2-5 6-8 10-8"/><path d="M42 16c2-4 6-6 9-6"/></g></symbol></defs></svg>
+
+<section class="scr s1 on" data-s="0">
+<div class="in">
+  <svg class="heart" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#7B263A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 57h52"/><rect x="10" y="41" width="44" height="16" rx="2"/><path d="M10 47c4 4 8 4 11 0s8 4 11 0 8 4 11 0 8 4 11 0"/><rect x="16" y="29" width="32" height="12" rx="2"/><path d="M16 34c4 4 8 4 11 0s7 4 11 0 7 4 10 0"/><path d="M24 29v-7M32 29v-8M40 29v-7"/></g><g fill="#E3C07A" stroke="#B99A6B" stroke-width=".8"><path d="M24 21c-2.5-2.5 0-5.5 0-8 2 2.2 2.5 5.2 0 8z"/><path d="M32 20c-2.5-2.5 0-5.5 0-8 2 2.2 2.5 5.2 0 8z"/><path d="M40 21c-2.5-2.5 0-5.5 0-8 2 2.2 2.5 5.2 0 8z"/></g></svg>
+  <p class="hand" id="c-hand"></p>
+  <h1 id="c-title" tabindex="-1"></h1>
+  <p class="sub" id="c-sub"></p>
+  <button class="btn" data-go="2" id="c-open"></button>
+</div></section>
+
+<section class="scr s2" data-s="1" hidden><div class="in">
+  <h2 tabindex="-1" id="c-introT"></h2>
+  <p class="sub" id="c-intro"></p>
+  <button class="btn" data-go="2">Seguir</button>
+</div></section>
+
+<section class="scr sh"><div class="in">
+  <h2 tabindex="-1" id="c-hT"></h2>
+  <p class="sub" id="c-hS"></p>
+  <ol class="tl" id="tl"></ol>
+  <button class="btn" data-go="3">Seguir</button>
+</div></section>
+
+<section class="scr sa"><div class="in">
+  <h2 tabindex="-1" id="c-aT"></h2>
+  <div class="cards" id="cards"></div>
+  <button class="btn" data-go="4">Seguir</button>
+</div></section>
+
+<section class="scr s3" data-s="2"><div class="in">
+  <article class="letter" id="letter"></article>
+  <p style="margin-top:1.5rem"><button class="btn" data-go="7">Terminé de leer</button></p>
+</div></section>
+
+<section class="scr s4" data-s="3" hidden><div class="in">
+  <h2 tabindex="-1" id="c-pause"></h2>
+  <button class="btn" data-go="6" id="c-pbtn"></button>
+</div></section>
+
+<section class="scr s5" data-s="4" hidden><div class="in">
+  <p class="big" tabindex="-1" id="c-decl"></p>
+  <p class="sub" id="c-declSub"></p>
+  <div id="ask">
+    <p class="q" id="c-q"></p>
+    <div class="duo"><button class="btn" id="yes"></button><button class="btn alt" id="no" type="button">No</button></div>
+  </div>
+  <div class="ans" id="aYes" aria-live="polite"><p class="big" id="c-yes"></p><div class="duo"><a class="btn alt" id="wa1" hidden style="text-decoration:none;text-align:center">Escribirme</a><button class="btn" data-go="7">Continuar</button></div></div>
+  <div class="ans" id="aNo" aria-live="polite"><p class="big" id="c-no"></p><div class="duo"><button class="btn alt" data-go="4">Volver a leer la carta</button><button class="btn" data-go="7">Continuar</button></div></div>
+  <div class="ans" id="aTalk" aria-live="polite"><p class="big" id="c-talk"></p><div class="duo"><button class="btn alt" data-go="4">Volver a leer la carta</button><a class="btn alt" id="wa2" hidden style="text-decoration:none;text-align:center">Escribirme</a><button class="btn" data-go="7">Continuar</button></div></div>
+</div></section>
+
+<section class="scr s6" data-s="5">
+<div class="in">
+  <svg class="heart" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#7B263A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="30" width="44" height="26" rx="2"/><rect x="6" y="22" width="52" height="9" rx="2"/><path d="M32 22v34"/></g><path d="M32 22c-4-10-15-10-15-5s9 5 15 5zM32 22c4-10 15-10 15-5s-9 5-15 5z" fill="#E3C07A" stroke="#B99A6B" stroke-width="1.1" stroke-linejoin="round"/></svg>
+  <p class="big" tabindex="-1" id="c-end"></p>
+  <p class="hand" id="c-sig"></p>
+  <button class="btn alt" id="restart" style="color:var(--ink);border-color:var(--ink)">Volver al principio</button>
+</div></section>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada"><img id="lbi" alt=""><p id="lbc"></p><button class="btn" id="lbx" type="button">Cerrar</button></div>
+<div class="mus" id="mus"><button id="mb" type="button" aria-label="Reproducir música">Música</button><input id="mv" type="range" min="0" max="100" value="50" aria-label="Volumen"></div>
+<button class="tt" id="tt" type="button">Tema</button>
+
+<script>
+(function(){
+/* ========= PERSONALIZA AQUÍ =========
+   Todo lo que está entre comillas es texto normal. Cambia solo lo que está dentro de las comillas.
+   Los textos entre [corchetes] son provisionales: reemplázalos por los tuyos. */
+var C={
+  apodo:"Arantza",
+  yo:"Alexander",
+  whatsapp:"",   // Opcional: tu número con lada, solo dígitos. Ej: "5218112345678". Vacío = sin botón.
+  waMensaje:"Hola, leí tu mensaje.",
+  hand:"para Arantza",
+  title:"Feliz cumpleaños",
+  sub:"",
+  open:"Abrir mi carta",
+  introT:"antes de que la leas",
+  intro:"esta carta es algo larga espero y te tomes el tiempo de leer todo, tranquila es tu cumpleaños",
+  historiaT:"Nuestra historia",
+  historiaS:"estos son los momentos mas importantes para mi que pase contigo",
+  // foto: nombre del archivo en la misma carpeta que este HTML, ej. "foto1.jpg". Vacío = sin foto.
+  momentos:[
+    {fecha:"marzo de 2025",titulo:"El día que empezamos a hablar",texto:"recuerdo que fue por esas fechas cuando nos conocimos en ese grupo no pense que te volverias en una parte tan especial para mi vida y la persona que me hizo conocer el amor",foto:""},
+    {fecha:"agosto del 2025",titulo:"cuando nos hicimos novios",texto:"recuerdo que fue en ese mes cuando empezamos a ser novios y sin mentir te digo que fueron uno de los mejores meses de mi vida y no creo que eso cambie algun dia me sentia tan feliz contigo y por eso te demostraba siempre que te amaba",foto:""},
+    {fecha:"29 de agosto de 2025",titulo:"Man's Best Friend",texto:"ese fue uno de los momentos mas memorables que tengo contigo ,escuchamos juntos el album de nuestra cantante favorita los dos y de verdad que esas experiencias nunca las vivire con cualquier otra persona ame como buscabamos el significado de las letras antes de escucharlo siquiera\n\ntambien recuerdo que escuchamos Tears primero antes de lo demas pq ya se habia filtrado todo cuando salio ame como reaccionabas cuando escuchabas todas las canciones la verdad preferia verte a ti primero y despues de que terminaramos llamada que fue de las mas largas entre nosotros lo escuche ya yo solo",foto:""},
+    {fecha:"16 de octubre del 2025",titulo:"tu cumpleaños",texto:"este dia es de los mas especiales y importantes para mi porque es tu cumpleaños cuando escribo esto faltan 3 dias y si lo lees antes o despues de tu cumpleaños quiero decirte lo maravillosa que eres nunca encontraria a otra mujer como tu y de eso estoy seguro el año pasado la pase hablando contigo y te regale robux JJAJAJAJ ese dia es muy importante para mi y como otra vez es tu cumpleaños en 3 dias quiero pasarla contigo otra vez como el año pasado",foto:""},
+    {fecha:"28 de enero",titulo:"terminamos por primera vez",texto:"recuerdo ese dia cuando nos dejamos ir estaba de verdad muy aguitado por haber perdido al amor de mi vida aqui pense que ya no sabria mas de ti y me dolia bastante pensar que estarias feliz con alguien mas",foto:""},
+    {fecha:"8 de junio",titulo:"volvimos",texto:"despues de semanas volviendo a hablar contigo sabia que era el momento de decirte la ganas que tenia de volver a intentar contigo una nueva relacion haciendo las cosas bien como nos dijimos esa vez aunque mas adelante hablare de lo que paso te digo que fui demasiado feliz otra vez al darme otra oportunidad de estar a tu lado de nuevo y siempre estare agradecido por eso",foto:""},
+    {fecha:"12 de junio",titulo:"you seem pretty sad for a girl so in love",texto:"este dia escuchamos un album que los dos estabamos esperando bastante de una de nuestras cantantes favoritas tambien ese dia pasamos la mayor cantidad de horas en llamada recuerdo que fueron 9 horas es lo que me hago en un viaje largo y pasar este tiempo contigo fue de las mejores experiencias que e vivido\n\nrecuerdo que usamos un vpn de nueva zelanda para escucharlo antes contigo JAJAJAJAJ me acorde que nos asustamos cuando queriamos reproducir las canciones no nos dejaba pero lo pudimos solucionar como la pareja que somos nosotros\n\ncuando escuche el album toda la parte de girl so in love me recordo a ti y no ha habido otra persona que me haya hecho sentir asi esas canciones para mi son y seran exclusivamente tuyas",foto:""},
+    {fecha:"24 de julio",titulo:"segunda vez que terminamos",texto:"ese dia me senti demasiado mal por volver a dejarte ir de nuevo se que no fui lo mejor para que decidieras quedarte conmigo despues de eso me sentia demasiado solo y lloraba algunos dias por extrañarte a ti , se que nunca encontraria a otra mujer como tu y a pesar de haberme dañado por segunda vez dejaria todo por ti sin importar nuestro pasado siempre estare para ti ,estoy seguro",foto:""},
+    {fecha:"16 de octubre",titulo:"Mi segundo cumpleaños contigo",texto:"Arantza feliz cumpleaños y me alegra que las cosas hayan cambiado de alguna manera y pasarlo contigo de nuevo de verdad que este dia es demasiado especial para ti y tambien para mi ,eres la mejor niña que e conocido y conocere se que hemos tenido muchos problemas y peleas pero eso nunca va a detenernos ni lo hará. Más adelante entraré más en detalle, pero decidi agregarlo a nuestra linea del tiempo porque se que este sera un momento muy memorable y importante para ti como para mi",foto:""}
+  ],
+  // Para escribir varios párrafos usa comillas inversas (`) en vez de comillas normales y deja líneas en blanco. Puedes agregar tantos elementos como quieras.
+  admiroT:"Lo que admiro de ti",
+  cualidades:[
+    {titulo:"tu manera de ser",texto:"me encanta cuando me decias lo mucho que me amabas y tambien como te reias de las bromas que haciamos eso te hace unica y demasiado especial para mi"},
+    {titulo:"la forma en la que me haces reir",texto:"amo cuando haces esos chistes todos raros de verdad me hacen reirme demasiado"},
+    {titulo:"los pequeños detalles que te hacen especial",texto:"lo hermosa que eres  de verdad no habra otra mujer tan linda como tu y espero nunca dudes de eso"},
+    {titulo:"nuestros gustos",texto:"gracias a nuestros gustos musicales pude conocerte si no fuera por eso nunca hubieramos estado juntos y conocer al amor de mi vida"},
+    {titulo:"nuestra conexion",texto:"la forma en la que conectamos de verdad es unica y nunca tendria esa quimica con alguien mas como lo tengo contigo"}
+  ],
+  musica:"",   // Opcional: archivo de audio en la misma carpeta, ej. "cancion.mp3" (música propia o autorizada). Vacío = sin reproductor.
+
+  letterTitle:"Para ti",
+  saludo:"Arantza",
+  cuerpo:[
+    "Hoy es tu cumpleaños y quiero decirte lo maravillosa que eres como persona de verdad que no habra ninguna otra chica como tu y me di cuenta de eso hace tiempo",
+    "te quiero agradecer por todos los momentos que e hemos vivido este tiempo desde el año pasado no pense que te convertirias en alguien tan importante para mi es cierto que hemos tenido problemas pero eso nunca nos ha podido detener a nosotros dos",
+    "este es el segundo cumpleaños que paso contigo y estoy de verdad muy agradecido de pasar todos los dias hablando contigo otra vez como cuando empezamos de nuevo a ser pareja",
+    "si en futuro nos podemos dar otra oportunidad estoy seguro de que no podria fallarte nunca ,aun recuerdo cuando empezamos a hablar como el primer dia fue la experiencia mas hermosa que e vivido y asi se mantendra ,cumples un año mas y espero pasar los siguientes contigo otra vez ,este dia te quiero desear todo lo mejor del mundo",
+    "a pesar de todos los problemas se que eres una mujer muy buena y con un hermoso corazón independientemente de lo que pase con nosotros en un futuro siempre voy a estar para ti y apoyarte en lo que necesites solo con un mensaje o una llamada",
+    "tu sabes que siempre te voy a contestar y asi va a ser ,por si algun dia te sientes sola recuerda esto que te estoy diciendo ,ojala pudieras verte desde mis ojos creo que asi entenderias todo lo que siento por ti y el amor que te tengo",
+    "tu no necesitas ser una mujer perfecta aun cometiendo errores o estando de mal humor te amo tanto ,deseo que conozcas gente nueva  y amigos ya que me dijiste que te acabas de mudar y hablando de eso se que nos separan 8 horas pero eso es lo que menos me importa",
+    "siento que se me acaban las palabras de decirte todo lo que siento es algo que no puedo explicar del todo bien porque esta es una pequeña parte de lo que en realidad siento por ti  ,",
+    "feliz cumpleaños espero que nunca olvides lo mucho que eres especial para mi y para las personas que te rodean incluyéndolos todos  estamos agradecidos de tenerte a ti en nuestras vidas ,te deseo demasiadas cosas bonitas  hoy y siempre"
+  ],
+  cierre:"Con cariño,",
+  firma:"Alexander",
+  pause:"Esto es lo que he querido preguntarte…",
+  pbtn:"Quiero saber",
+  decl:"Espero que sientas lo mismo por mí.",
+  declSub:"De verdad me gustas demasiado y quiero volver a intentar una relación contigo, y hacer las cosas bien. Espero que me des la oportunidad de estar contigo de nuevo.",
+  q:"¿Quisieras ser mi novia de nuevo y intentarlo otra vez?",
+  yes:"Sí, me gustaría",
+  talk:"Quiero hablarlo contigo",
+  yesMsg:"Te amo demasiado.",
+  talkMsg:"Claro. Gracias por leerme y por querer hablarlo conmigo. Para mí también es importante que podamos hacerlo con sinceridad.",
+  noMsg:"Gracias por ser sincera conmigo. Lo respeto, y me alegra haberte escrito esto.",
+  end:"Feliz cumpleaños",
+  sig:"— Alexander"
+};
+/* ========= FIN DE LA PERSONALIZACIÓN ========= */
+var $=function(i){return document.getElementById(i)};
+function T(id,v){$(id).textContent=v}
+["hand","title","sub","open","introT","intro","pause","pbtn","decl","declSub","q","yes","talk","end"].forEach(function(k){T("c-"+k,C[k])});
+T("yes",C.yes);T("c-yes",C.yesMsg);T("c-talk",C.talkMsg);T("c-no",C.noMsg);T("c-sig",C.sig);
+var L=$("letter"),h=document.createElement("h2");h.textContent=C.letterTitle;L.appendChild(h);
+[C.saludo].concat(C.cuerpo,[C.cierre]).forEach(function(t,i){var p=document.createElement("p");p.textContent=t;p.style.setProperty("--i",i);L.appendChild(p)});
+var sg=document.createElement("p");sg.className="sign";sg.textContent=C.firma;sg.style.setProperty("--i",C.cuerpo.length+2);L.appendChild(sg);
+T("c-hT",C.historiaT);T("c-hS",C.historiaS);T("c-aT",C.admiroT);
+var lb=$("lb");function closeLb(){lb.classList.remove("on")}
+$("lbx").onclick=closeLb;lb.addEventListener("click",function(e){if(e.target===lb)closeLb()});document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLb()});
+C.momentos.forEach(function(m,i){var li=document.createElement("li");li.style.setProperty("--i",i);
+  if(m.fecha){var s=document.createElement("small");s.textContent=m.fecha;li.appendChild(s)}
+  var h3=document.createElement("h3");h3.textContent=m.titulo;var p=document.createElement("p");p.textContent=m.texto;li.append(h3,p);
+  if(m.foto){var im=document.createElement("img");im.className="ph";im.src=m.foto;im.alt=m.titulo;im.loading="lazy";im.onerror=function(){im.remove()};im.onclick=function(){$("lbi").src=m.foto;$("lbi").alt=m.titulo;$("lbc").textContent=m.titulo;lb.classList.add("on");$("lbx").focus()};li.appendChild(im)}
+  $("tl").appendChild(li)});
+var IC=['<path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.7A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11Z"/>','<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>','<path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/>'];
+C.cualidades.forEach(function(c,i){var a=document.createElement("article");a.style.setProperty("--i",i);
+  a.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC[i%3]+'</svg>';
+  var h3=document.createElement("h3");h3.textContent=c.titulo;var p=document.createElement("p");p.textContent=c.texto;a.append(h3,p);$("cards").appendChild(a)});
+if(C.musica){var au=new Audio(C.musica),mb=$("mb"),mp=$("mus");au.loop=true;au.volume=.5;mp.classList.add("on");
+  au.addEventListener("error",function(){mp.classList.remove("on")});
+  mb.onclick=function(){if(au.paused){au.play().then(function(){mb.textContent="Pausar";mb.setAttribute("aria-label","Pausar música")}).catch(function(){mp.classList.remove("on")})}else{au.pause();mb.textContent="Música";mb.setAttribute("aria-label","Reproducir música")}};
+  $("mv").oninput=function(){au.volume=this.value/100}}
+if(/^\d{8,15}$/.test(C.whatsapp)){["wa1","wa2"].forEach(function(id){var a=$(id);a.href="https://wa.me/"+C.whatsapp+"?text="+encodeURIComponent(C.waMensaje);a.target="_blank";a.rel="noopener";a.hidden=false})}
+var scr=document.querySelectorAll(".scr"),cur=0;
+scr.forEach(function(s){var d=document.createElement("div");d.className="deco";d.setAttribute("aria-hidden","true");
+  for(var k=0;k<22;k++){var f=document.createElement("i"),z=6+Math.random()*5,cc=["#D8A0A6","#7B263A","#E3C07A","#8FB5B0","#B99A6B","#F2B8A0"];f.className="fp";f.style.cssText="left:"+Math.random()*100+"%;width:"+z+"px;height:"+(z*(Math.random()<.5?1:1.8))+"px;background:"+cc[k%6]+";animation-duration:"+(9+Math.random()*9)+"s;animation-delay:-"+Math.random()*14+"s;--dx:"+(Math.random()*20-10)+"vw;--rot:"+(Math.random()*720-360)+"deg";d.appendChild(f)}
+  s.insertBefore(d,s.firstChild)});
+var io=null;
+function reveal(s){if(io)io.disconnect();var els=s.querySelectorAll(".rv");els.forEach(function(e,i){e.classList.remove("vis");e.style.transitionDelay=(i%5)*.12+"s"});
+  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("vis")});return}
+  io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("vis");io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)})}
+scr.forEach(function(s,i){var f=document.createElement("div");f.className="flo";f.setAttribute("aria-hidden","true");
+  var c=(i===0||i===7)?["tl","tr"]:["tl","br",i%2?"bl":"tr"];
+  f.innerHTML='<div class="bunt"></div><svg class="bl" viewBox="0 0 100 160"><use href="#ballons"/></svg><svg class="br" viewBox="0 0 100 160"><use href="#ballons"/></svg>';
+  s.insertBefore(f,s.firstChild)});
+document.querySelectorAll(".in>:not(.letter):not(.tl):not(.cards):not(.ans),.letter>*,.tl li,.cards article").forEach(function(e){e.classList.add("rv")});
+function go(n){
+  scr[cur].classList.remove("on");cur=n;scr[n].classList.add("on");scr[n].scrollTop=0;reveal(scr[n]);if(n===7)petals();
+  var m=n===7?5:n;$("prog").style.width=(m/5*100)+"%";
+  var f=scr[n].querySelector("[tabindex='-1']");if(f)setTimeout(function(){f.focus({preventScroll:true})},50)}
+document.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){go(+b.dataset.go)})});
+function petals(){
+  var cols=["#D8A0A6","#7B263A","#E3C07A","#8FB5B0","#B99A6B","#F2B8A0"];
+  for(var i=0;i<45;i++){var p=document.createElement("span");p.className="petal";var s=10+Math.random()*14;
+    p.style.cssText="left:"+Math.random()*100+"vw;width:"+s+"px;height:"+s*1.3+"px;background:"+cols[i%cols.length]+";animation-duration:"+(4+Math.random()*4)+"s;animation-delay:"+Math.random()*1.5+"s;--dx:"+(Math.random()*40-20)+"vw;--rot:"+(Math.random()*720)+"deg";
+    document.body.appendChild(p);(function(e){setTimeout(function(){e.remove()},10000)})(p)}}
+function answer(id,fx){$("ask").style.display="none";$("c-declSub").parentNode.querySelector("#c-declSub").style.display="none";$(id).classList.add("show");if(fx)petals()}
+$("yes").onclick=function(){answer("aYes",true)};
+
+var no=$("no"),nt=0,calm=false;
+function dodge(e){if(calm)return;if(e&&e.cancelable)e.preventDefault();nt++;
+  if(nt>5){calm=true;no.classList.remove("run");no.style.left=no.style.top="";return}
+  no.classList.add("run");var w=no.offsetWidth,h=no.offsetHeight;
+  no.style.left=Math.max(8,Math.random()*(innerWidth-w-16))+"px";no.style.top=Math.max(8,Math.random()*(innerHeight-h-16))+"px"}
+function resetNo(){nt=0;calm=false;no.classList.remove("run");no.style.left=no.style.top=""}
+no.addEventListener("pointerenter",dodge);
+no.addEventListener("touchstart",dodge,{passive:false});
+no.addEventListener("click",function(e){if(!calm){dodge(e);return}answer("aNo",false)});
+$("restart").onclick=function(){$("ask").style.display="";$("c-declSub").style.display="";$("aYes").classList.remove("show");$("aTalk").classList.remove("show");$("aNo").classList.remove("show");resetNo();go(0)};
+reveal(scr[0]);setTimeout(petals,700);
+$("tt").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme");var dark=d?d==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.setAttribute("data-theme",dark?"light":"dark")};
+})();
+</script>
+</body>
+</html>
